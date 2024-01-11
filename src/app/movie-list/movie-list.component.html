@@ -1,0 +1,3 @@
+<div *ngFor="let movie of movies">
+  <img [src]="movie.coverImage" width="400" height="400" alt="{{ movie.title }}" (click)="navigateToDetail(movie.id)">
+</div>
