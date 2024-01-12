@@ -9,7 +9,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { MovieUpdateComponent } from './movie-update/movie-update.component';
 import { NavigationComponent } from './navigation/navigation.component';
-import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,9 +23,7 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,
-    TableModule
-  ],
+    FormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })
