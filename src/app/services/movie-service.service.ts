@@ -24,8 +24,9 @@ export class MovieService {
     return this.http.post<Movie>(this.apiUrl, movie);
   }
 
-  updateMovie(id: number, movie: Movie): Observable<Movie> {
-    return this.http.put<Movie>(`${this.apiUrl}/${id}`, movie);
+  updateMovie(id: number, movie: Movie): Observable<any> {
+    debugger
+    return this.http.put<any>(`${this.apiUrl}/${id}`, movie, { headers: { 'Content-Type': 'application/json' } });
   }
 
   deleteMovie(id: number): Observable<void> {

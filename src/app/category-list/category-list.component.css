@@ -1,0 +1,40 @@
+/* category-navbar.component.css */
+.navbar {
+  padding: 10px;
+  background-color: #f8f9fa; /* Light background color */
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.category-container {
+  display: flex;
+  align-items: center;
+}
+
+.category-name {
+  margin-right: 10px;
+  font-weight: bold; /* Bold font for category name */
+}
+
+.nav-buttons {
+  margin-left: auto; /* Push buttons to the right */
+}
+
+.btn {
+  margin-right: 5px;
+}
+
+.add-category-btn {
+  margin-top: 10px; /* Add space between the list and the "Add Category" button */
+  background-color: #28a745; /* Green color for "Add Category" button */
+  border-color: #28a745;
+}
+
+.add-category-btn:hover {
+  background-color: #218838; /* Darker green on hover */
+  border-color: #1e7e34;
+}

@@ -1,3 +1,15 @@
-<div *ngFor="let category of categories">
-  {{ category.name }}
-</div>
+<!-- category-navbar.component.html -->
+<nav class="navbar navbar-light bg-light">
+  <ul class="navbar-nav mr-auto">
+    <li *ngFor="let category of categories" class="nav-item">
+      <div class="category-container">
+        <span class="nav-link category-name">{{ category.name }}</span>
+        <div class="nav-buttons">
+          <button class="btn btn-outline-primary btn-sm" (click)="openEditCategoryDialog(category)">Edit</button>
+          <button class="btn btn-outline-danger btn-sm" (click)="deleteCategory(category)">Delete</button>
+        </div>
+      </div>
+    </li>
+  </ul>
+</nav>
+<button class="btn btn-success add-category-btn" (click)="openAddCategoryDialog()">Add Category</button>

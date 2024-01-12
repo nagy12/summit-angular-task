@@ -20,7 +20,8 @@ export class CategoryService {
   }
 
   addCategory(category: any): Observable<any> {
-    return this.http.post<any>(this.apiUrl, category);
+    debugger
+    return this.http.post<any>(`${this.apiUrl}/AddCategory`, category);
   }
 
   updateCategory(id: number, updatedCategory: any): Observable<void> {
@@ -28,6 +29,7 @@ export class CategoryService {
   }
 
   deleteCategory(id: number): Observable<void> {
+    debugger
     return this.http.delete<void>(`${this.apiUrl}/${id}`);
   }
 }

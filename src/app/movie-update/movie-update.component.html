@@ -1,1 +1,29 @@
-<p>movie-update works!</p>
+<div class="modal-header">
+  <h4 class="modal-title">Edit Movie</h4>
+  <button type="button" class="close" (click)="activeModal.dismiss()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <!-- Add form fields for editing movie details -->
+  <form>
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" class="form-control" id="title" [(ngModel)]="editedMovie.title" name="title" required>
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea class="form-control" id="description" [(ngModel)]="editedMovie.description" name="description"
+        required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="rating">Rating</label>
+      <input type="text" class="form-control" id="rating" [(ngModel)]="editedMovie.rating" name="rating" required>
+    </div>
+    <!-- Add other form fields for categories, etc. -->
+  </form>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-secondary" (click)="activeModal.dismiss()">Close</button>
+  <button type="button" class="btn btn-primary" (click)="saveChanges()">Save changes</button>
+</div>

@@ -1,3 +1,9 @@
-<div *ngFor="let movie of movies">
-  <img [src]="movie.coverImage" width="400" height="400" alt="{{ movie.title }}" (click)="navigateToDetail(movie.id)">
+<app-weather></app-weather>
+
+<!-- movie-list.component.html -->
+<div class="movie-list-container">
+  <div class="movie-item" *ngFor="let movie of movies" (click)="navigateToDetail(movie.id)">
+    <div class="movie-title">{{ movie.title }}</div>
+    <img [src]="movie.coverImage" width="200" height="200" alt="{{ movie.title }}" />
+  </div>
 </div>

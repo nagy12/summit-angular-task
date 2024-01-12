@@ -1,0 +1,36 @@
+/* movie-details.component.css */
+.movie-details-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.movie-details {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.movie-cover {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.movie-description {
+  margin-bottom: 15px;
+}
+
+.related-categories {
+  margin-bottom: 15px;
+}
+
+.category-form {
+  margin-bottom: 20px;
+}
+
+.btn {
+  margin-right: 10px;
+}

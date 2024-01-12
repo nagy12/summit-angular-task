@@ -1,0 +1,45 @@
+/* weather.component.css */
+.weather-container {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.weather-heading {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.weather-info {
+  text-align: center;
+}
+
+.temperature,
+.humidity,
+.weather-description {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+/* Optional: Add some color variations based on the weather description */
+.weather-info .weather-description {
+  color: #333; /* Default color */
+}
+
+.weather-info .weather-description:contains('rain') {
+  color: #007bff; /* Blue for rain */
+}
+
+.weather-info .weather-description:contains('cloud') {
+  color: #6c757d; /* Gray for cloudy */
+}
+
+.weather-info .weather-description:contains('clear') {
+  color: #28a745; /* Green for clear skies */
+}

@@ -1,28 +1,32 @@
-<h2>Movie Details</h2>
-<div *ngIf="movie">
-  <h3>{{ movie.title }}</h3>
-  <img [src]="movie.coverImage" alt="{{ movie.title }} Cover" style="max-width: 200px; max-height: 200px;" />
-  <p>Description: {{ movie.description }}</p>
-  <p>Rating: {{ movie.rating }}</p>
-  <p *ngIf="relatedCategories && relatedCategories.length > 0">
-    Related Categories:
-    <ng-container *ngFor="let category of relatedCategories; let last = last">
-      {{ category.name }}{{ !last ? ', ' : '' }}
-    </ng-container>
-  </p>
-  <p *ngIf="!relatedCategories || relatedCategories.length === 0">
-    Related Categories: N/A
-  </p>
-  <div *ngIf="categories.length > 0">
+<!-- movie-details.component.html -->
+<div class="movie-details-container">
+  <div *ngIf="movie" class="movie-details">
+    <h3>{{ movie.title }}</h3>
+    <img [src]="movie.coverImage" alt="{{ movie.title }} Cover" class="movie-cover" />
+    <p class="movie-description">Description: {{ movie.description }}</p>
+    <app-star-rating [rating]="movie.rating"></app-star-rating>
+    <p *ngIf="relatedCategories && relatedCategories.length > 0" class="related-categories">
+      Related Categories:
+      <ng-container *ngFor="let category of relatedCategories; let last = last">
+        {{ category.name }}{{ !last ? ', ' : '' }}
+      </ng-container>
+    </p>
+    <p *ngIf="!relatedCategories || relatedCategories.length === 0" class="related-categories">
+      Related Categories: N/A
+    </p>
+
+  </div>
+  <div *ngIf="categories.length > 0" class="category-form">
     <form #categoryForm="ngForm">
       <label for="categorySelect">Select Categories:</label>
-      <select id="categorySelect" name="categorySelect" (change)="onSelectChange($event)">
+      <select id="categorySelect" name="categorySelect" (change)="onSelectChange($event)" class="form-control">
         <option [ngValue]="null">Select a category</option>
         <option *ngFor="let category of categories" [value]="category.id">{{ category.name }}</option>
       </select>
-      <button type="button" (click)="assignCategory()">Assign Category</button>
+      <button type="button" (click)="assignCategory()" class="btn btn-primary">Assign Category</button>
     </form>
   </div>
-  <!-- <button (click)="openEditDialog()">Edit</button>
-  <button (click)="deleteMovie()">Delete</button> -->
+
+  <button class="btn btn-primary" (click)="openEditDialog()">Edit</button>
+  <button type="button" class="btn btn-danger" (click)="openDeleteDialog()">Delete</button>
 </div>

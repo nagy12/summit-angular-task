@@ -4,5 +4,4 @@ export interface Movie {
   description: string;
   rating: string;
   coverImage: string;
-  categoryId: number;
 }
