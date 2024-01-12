@@ -42,23 +42,13 @@ export class MovieDetailsComponent implements OnInit {
       this.loadRelatedCategories(this.movie);
     });
   }
-  // loadMovie(): void {
-  //   const movieId = Number(this.route.snapshot.paramMap.get('id'));
-  //   if (movieId) {
-  //     this.movieService.getMovie(movieId).subscribe((data) => {
-  //       this.movie = data;
-  //     });
-  //   }
-  // }
+
   loadCategories(): void {
     this.categoryService.getCategories().subscribe((data) => {
       this.categories = data;
     });
   }
-  // onCategorySelect(event: any): void {
-  //   debugger
-  //   this.selectedCategory = event.target.value;
-  // }
+
   assignCategory(): void {
     debugger
 
@@ -96,29 +86,6 @@ export class MovieDetailsComponent implements OnInit {
       this.movie = updatedMovie;
     });
   }
-  // onChange(newValue: any) {
-  //   debugger
-  //   console.log(newValue);
-  //   this.selectedCategory = newValue;
-  //   // ... do other stuff here ...
-  // }
-  // openEditDialog(): void {
-  //   // Implement logic to open an edit dialog
-  // }
-
-  // deleteMovie(): void {
-  //   // Implement logic to delete the movie
-  // }
-  // openDeleteDialog(): void {
-  //   // const modalRef = this.modalService.open(DeleteMovieComponent);
-  //   // modalRef.componentInstance.movie = this.movie;
-
-  //   // modalRef.componentInstance.movieDeleted.subscribe(() => {
-  //   //   // Handle the movie deletion here
-  //   //   this.deleteMovie();
-  //   // });
-  // }
-
   deleteMovie(): void {
     // Implement movie deletion logic here
     // For example, you might want to call a service to delete the movie from the backend
